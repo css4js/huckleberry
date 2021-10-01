@@ -9,4 +9,94 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+/*
+    ---------------------
+    styling tokens as vars
+*/
+
+:root {
+    --size-1: 8px;
+    --size-2: 16px;
+    --size-3: 24px;
+    --size-4: 32px;
+    --size-4-neg: -32px;
+    --size-5: 48px;
+    --size-6: 64px;
+    --size-7: 96px;
+    --size-8: 128px;
+
+    --font-size-xs: 1rem;
+    --font-size-s: 1.25rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 2rem;
+
+    --color-green: hsl(160deg, 100%, 30%);
+    --color-gold-1: hsl(45deg, 100%, 50%);
+    --color-gold-2: hsl(45deg, 100%, 40%);
+
+
+    --color-black: hsl(0deg, 0%, 0%);
+    --color-gray-1: hsl(0deg, 0%, 60%);
+    --color-gray-2: hsl(0deg, 0%, 40%);
+    --color-gray-3: hsl(0deg, 0%, 30%);
+    --color-gray-4: hsl(0deg, 0%, 10%);
+    --color-white: hsl(0deg, 0%, 100%);
+}
+
+/*
+    -----------------------
+    styles
+ */
+
+/* general tags */
+body {
+    font-size: var(--font-size-m);
+}
+main {
+    padding-top: var(--size-7);
+    padding-bottom: var(--size-6);
+
+    background-color: var(--color-gray-1);
+    border-top: var(--size-1) solid var(--color-gray-2);
+}
+
+strong {
+    color: var(--color-green);
+}
+
+/* common stuff */
+.max-width-wrapper {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--size-2);
+
+    background-color: var(--color-white);
+}
+
+/* header */
+.intro-chunk {
+    padding-right: 200px;
+}
+
+.title {
+    margin-top: var(--size-7);
+    margin-bottom: var(--size-5);
+    font-size: var(--font-size-l);
+}
+
+
+/* body */
+main > section {
+    border-bottom: var(--size-1) solid var(--color-gray-2);
+}
+.indented-heading {
+    width: fit-content;
+    margin-left: var(--size-4-neg);
+    padding: var(--size-3);
+    padding-left: var(--size-4);
+    font-size: var(--font-size-m);
+
+    background-color: var(--color-gold-1);
+    border-bottom: var(--color-gold-2) solid var(--size-1);
+}
